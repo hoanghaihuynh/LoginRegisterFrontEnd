@@ -17,7 +17,7 @@ export const WrapperContainer = styled.div`
 
   h1 {
     margin: 60px 0;
-    font-weight:400;
+    font-weight:500;
   }
   a {
     text-decoration: none;
