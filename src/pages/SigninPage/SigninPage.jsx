@@ -50,6 +50,8 @@ const SigninPage = () => {
       <WrapperContainer>
           <form action="">
             <h1>Đăng Ký</h1>
+
+            <label htmlFor="">Username</label>
             <InputForm 
               type="text" 
               placeholder='Tên Đăng Ký' 
@@ -59,6 +61,7 @@ const SigninPage = () => {
             />
             <br />
 
+            <label htmlFor="">Password</label>
             <InputForm 
               type="password" 
               placeholder='Mật khẩu' 
@@ -80,7 +83,7 @@ const SigninPage = () => {
                 height: '48px',
                 border: 'none',
                 borderRadius: '4px',
-                margin: '26px 0 0'
+                margin: '0 0 0'
               }}
               textButton={'Đăng ký'}
               styleTextButton={{color:'#fff', fontSize: '15px', fontWeight: '700'}}

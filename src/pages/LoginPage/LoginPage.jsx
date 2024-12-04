@@ -55,24 +55,26 @@ const LoginPage = () => {
     <div>
       <WrapperContainer>
           <form action="">
-            <h1>Đăng Nhập</h1>
+            <h1>Login</h1>
+
+            <label htmlFor="">Username</label>
             <InputForm 
               type="text" 
-              placeholder='Tên Đăng Nhập' 
+              placeholder='user123' 
               value={username}
               handleOnChange={handleOnChangesUsername}
               required
             />
             <br />
             
+            <label htmlFor="">Password</label>
             <InputForm 
               type="password" 
-              placeholder='Mật khẩu' 
+              placeholder='123456' 
               value={password}
               handleOnChange={handleOnChangesPassword}
               required
             />
-            <br />
             
             {data?.status === "ERR" && <span className="error-message">{data?.message}</span>}
             <LoadingComponent isLoading={isPending}>
@@ -82,17 +84,16 @@ const LoginPage = () => {
               border={false}
               size={40}
               styleButton={{
-                background: '#1890ff',
+                background: '#3554d1',
                 height: '48px',
                 border: 'none',
                 borderRadius: '4px',
-                margin: '26px 0 0'
+                margin: '0 0 0'
               }}
               textButton={'Đăng nhập'}
               styleTextButton={{color:'#fff', fontSize: '15px', fontWeight: '700'}}
               ></ButtonComponent>
             </LoadingComponent>
-            <br />
             <p>Chưa có tài khoản <a href="#" onClick={handleRegister}> Đăng ký</a></p>
           </form>
       </WrapperContainer>
