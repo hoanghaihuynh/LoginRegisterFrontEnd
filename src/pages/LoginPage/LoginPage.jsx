@@ -76,7 +76,7 @@ const LoginPage = () => {
               required
             />
             
-            {data?.status === "ERR" && <span className="error-message">{data?.message}</span>}
+            {/* {data?.status === "ERR" && <span className="error-message">{data?.message}</span>} */}
             <LoadingComponent isLoading={isPending}>
               <ButtonComponent 
               disabled={!username.length || !password.length}
