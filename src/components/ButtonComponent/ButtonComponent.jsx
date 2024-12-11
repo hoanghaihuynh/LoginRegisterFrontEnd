@@ -5,7 +5,7 @@ const ButtonComponent = ({ size, styleButton, styleTextButton, textButton, disab
         <Button 
             style = {{
                 ...styleButton,
-                background: (disabled) ? '#ccc' : styleButton.background
+                background: (disabled) ? '#3554d1' : styleButton.background
             }}
             size={size}
             {...rests}

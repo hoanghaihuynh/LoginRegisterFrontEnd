@@ -15,7 +15,7 @@ const LoginPage = () => {
   const mutation = useMutationHooks(
     data => UserService.loginUser(data)
   )
-  const { data, isPending, isSuccess} = mutation;
+  const { data, isPending, isSuccess, isError } = mutation;
   useEffect(() => {
     if (isSuccess) {
       if (data?.status === "ERR") {
@@ -29,10 +29,11 @@ const LoginPage = () => {
         localStorage.setItem('username', username);
       }
     }
-  }, [isSuccess]);
+  }, [isSuccess, isError]);
   
   const handleOnChangesUsername = (value) => {
     setUsername(value);
+    
   }
 
   const handleOnChangesPassword = (value) => {
@@ -44,6 +45,15 @@ const LoginPage = () => {
   }
 
   const handleLogin = () => {
+    if (!username) {
+      message.error('Vui lòng nhập tên đăng nhập.');
+      return;
+    }
+    if (!password) {
+      message.error('Vui lòng nhập mật khẩu.');
+      return;
+    }
+
     mutation.mutate({
       username,
       password

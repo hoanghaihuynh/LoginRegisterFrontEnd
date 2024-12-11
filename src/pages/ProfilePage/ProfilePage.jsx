@@ -42,7 +42,7 @@ const ProfilePage = () => {
                 <Input value={fullname} onChange={handleOnChangesFullname} />
             </Form.Item>
 
-            <Form.Item label="Họ và tên">
+            <Form.Item label="Tên đăng nhập">
                 <Input value={username} onChange={handleOnChangesUsername} />
             </Form.Item>
 

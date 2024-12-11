@@ -80,7 +80,7 @@ const SigninPage = () => {
               border={false}
               size={40}
               styleButton={{
-                background: 'rgb(255,57,69)',
+                background: '#3554d1',
                 height: '48px',
                 border: 'none',
                 borderRadius: '4px',
